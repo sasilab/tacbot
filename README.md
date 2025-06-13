@@ -14,8 +14,8 @@ This repository contains a ROS 2 Humble workspace running inside Docker, integra
 ### 🔧 Build Docker Image
 
 ```bash
-cd docker
-docker build -t ros2_humble_image .
+cd <root_folder>
+docker build -t ros2_humble_image -f docker/Dockerfile .
 ````
 
 ---
@@ -43,7 +43,11 @@ source /root/ros2_ws/.venv/bin/activate
 colcon build
 source install/setup.bash
 ```
+## To RUN Container
 
+```bash
+ docker exec -it ros2_dev bash
+```
 ---
 
 ## 📡 Run Sensor Node
